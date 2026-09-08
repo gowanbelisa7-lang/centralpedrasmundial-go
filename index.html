@@ -1,0 +1,990 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telhas e Pedras Mundial | Mundial Pedras LTDA</title>
+    <meta name="description" content="Mundial Pedras LTDA - Tradição e qualidade em telhas e pedras decorativas para construção civil em Franca e região.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #d97706;
+            --primary-dark: #b45309;
+            --primary-light: #fef3c7;
+            --secondary: #475569;
+            --accent: #ea580c;
+            --dark: #0f172a;
+            --dark-surface: #1e293b;
+            --gray-100: #f8fafc;
+            --gray-200: #f1f5f9;
+            --gray-300: #e2e8f0;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 15px -3px rgba(0,0,0,0.07);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--gray-700);
+            background-color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--dark);
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--dark);
+            color: #94a3b8;
+            font-size: 0.85rem;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .top-info {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .top-info li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-info i {
+            color: var(--primary);
+        }
+
+        /* Header / Navbar */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.4rem;
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-700);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(217, 119, 6, 0.45);
+            color: white;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--gray-300);
+            color: var(--dark);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        .btn-external {
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: white;
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-external:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 90px 0 70px;
+            background: radial-gradient(circle at top right, rgba(217, 119, 6, 0.08), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(234, 88, 12, 0.05), transparent 40%);
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-title {
+            font-size: 3.2rem;
+            line-height: 1.15;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--gray-600);
+            margin-bottom: 36px;
+            max-width: 540px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 36px;
+            padding-top: 30px;
+            border-top: 1px solid var(--gray-300);
+        }
+
+        .stat-item h4 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .stat-item p {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+        }
+
+        .hero-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--gray-200);
+            position: relative;
+        }
+
+        .hero-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 12px;
+            background: #dcfce7;
+            color: #15803d;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .status-pill::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: #22c55e;
+            border-radius: 50%;
+        }
+
+        .info-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .info-item i {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-top: 3px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .info-item .label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #94a3b8;
+            font-weight: 600;
+            display: block;
+        }
+
+        .info-item .value {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 60px;
+        }
+
+        .section-subtitle {
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        /* Services Section */
+        .services-bg {
+            background-color: var(--gray-100);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 36px 28px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-200);
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            margin-bottom: 24px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--primary);
+            color: white;
+        }
+
+        .service-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .service-desc {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Registration Data Grid */
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .data-card {
+            background: white;
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--gray-200);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .data-card-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--gray-600);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .data-card-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        /* Banner Redirection */
+        .redirect-banner {
+            background: linear-gradient(135deg, var(--dark), var(--dark-surface));
+            color: white;
+            padding: 60px 0;
+            border-radius: var(--radius-lg);
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .redirect-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(217, 119, 6, 0.2), transparent 70%);
+            border-radius: 50%;
+        }
+
+        .banner-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+            flex-wrap: wrap;
+        }
+
+        .banner-text h3 {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .banner-text p {
+            color: #94a3b8;
+            max-width: 600px;
+        }
+
+        /* Location & Contact */
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-box {
+            background: var(--gray-100);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: #94a3b8;
+            padding: 70px 0 30px;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-brand h3 {
+            color: white;
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-grid, .location-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .top-bar {
+                display: none;
+            }
+            .banner-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <ul class="top-info">
+                <li><i class="fa-solid fa-building"></i> Mundial Pedras LTDA</li>
+                <li><i class="fa-solid fa-id-card"></i> CNPJ: 01.316.105/0001-17</li>
+            </ul>
+            <ul class="top-info">
+                <li><i class="fa-solid fa-phone"></i> (16) 3722-5466</li>
+                <li><i class="fa-solid fa-envelope"></i> gislene@pedrasmundial.com.br</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo-brand">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-gem"></i>
+                </div>
+                <div class="logo-text">PEDRAS MUNDIAL<span>.</span></div>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#servicos">Principais Serviços</a></li>
+                <li><a href="#empresa">Sobre a Empresa</a></li>
+                <li><a href="#dados">Informações de Registro</a></li>
+                <li><a href="#localizacao">Localização</a></li>
+            </ul>
+
+            <a href="https://pedrasmundial.com.br/" target="_blank" class="btn btn-external">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visitar Site Oficial
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-house-chimney-crack"></i> Telhas e Pedras Decorativas
+                    </div>
+                    <h1 class="hero-title">Tradição e Soluções em <span>Telhas e Pedras</span></h1>
+                    <p class="hero-subtitle">Com 30 anos de atuação, oferecemos as melhores opções em telhas, pedras decorativas e materiais de revestimento de alta qualidade para sua obra em Franca e região.</p>
+                    
+                    <div class="hero-ctas">
+                        <a href="#servicos" class="btn btn-primary">
+                            Conheça Nossos Serviços <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                        <a href="https://pedrasmundial.com.br/" target="_blank" class="btn btn-outline">
+                            Ir para o Site Oficial <i class="fa-solid fa-external-link"></i>
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h4>Telhas e Pedras Mundial</h4>
+                            <p>Nome Fantasia</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>Pequeno Porte</h4>
+                            <p>Porte Empresarial</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>Franca / SP</h4>
+                            <p>Sede Própria</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Card / Quick Register Info -->
+                <div class="hero-card">
+                    <div class="hero-card-header">
+                        <h3 class="font-heading" style="font-size: 1.2rem;">Ficha de Identificação</h3>
+                        <span class="status-pill">Situação Cadastral: Ativa</span>
+                    </div>
+                    <ul class="info-list">
+                        <li class="info-item">
+                            <i class="fa-solid fa-building"></i>
+                            <div>
+                                <span class="label">Razão Social</span>
+                                <span class="value">Mundial Pedras LTDA</span>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <i class="fa-solid fa-tag"></i>
+                            <div>
+                                <span class="label">Nome Fantasia</span>
+                                <span class="value">Telhas e Pedras Mundial</span>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <i class="fa-solid fa-hashtag"></i>
+                            <div>
+                                <span class="label">CNPJ</span>
+                                <span class="value">01.316.105/0001-17</span>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <i class="fa-solid fa-file-invoice"></i>
+                            <div>
+                                <span class="label">Inscrição Estadual SP</span>
+                                <span class="value">310.227.809.117</span>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <div>
+                                <span class="label">Data de Abertura / Tempo de Mercado</span>
+                                <span class="value">11/07/1996 (30 anos, 1 mês e 28 dias)</span>
+                            </div>
+                        </li>
+                        <li class="info-item">
+                            <i class="fa-solid fa-vault"></i>
+                            <div>
+                                <span class="label">Capital Social</span>
+                                <span class="value">R$ 100.000,00</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços (Serviços Principais no Topo/Destaque) -->
+    <section id="servicos" class="section services-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Nossas Soluções</span>
+                <h2 class="section-title">Principais Serviços e Produtos</h2>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-cubes-stacked"></i>
+                    </div>
+                    <h3 class="service-title">Pedras Decorativas</h3>
+                    <p class="service-desc">Comercialização e fornecimento de pedras naturais e decorativas para paredes, fachadas, bordas de piscina, pisos e áreas externas.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <h3 class="service-title">Telhas e Coberturas</h3>
+                    <p class="service-desc">Variedade de telhas de diversos materiais e acabamentos para garantir a proteção, vedação e a estética do telhado do seu imóvel.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="service-title">Revestimentos Naturais</h3>
+                    <p class="service-desc">Soluções completas para acabamentos internos e externos, oferecendo rusticidade, elegância e elevada durabilidade para a construção.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                    </div>
+                    <h3 class="service-title">Atendimento e Entrega</h3>
+                    <p class="service-desc">Consultoria técnica na escolha de materiais para projetos residenciais e comerciais com agilidade e eficiência logísticas para Franca e região.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- External Partner Call to Action Banner -->
+    <div class="container">
+        <div class="redirect-banner">
+            <div class="container">
+                <div class="banner-content">
+                    <div class="banner-text">
+                        <h3>Acesse o Site Oficial da Pedras Mundial</h3>
+                        <p>Explore o catálogo completo de telhas e pedras, confira os modelos disponíveis e solicite orçamentos diretamente online.</p>
+                    </div>
+                    <a href="https://pedrasmundial.com.br/" target="_blank" class="btn btn-external" style="padding: 16px 32px; font-size: 1.05rem;">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i> Acessar pedrasmundial.com.br
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Informações de Registro Completas -->
+    <section id="dados" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Transparência e Conformidade</span>
+                <h2 class="section-title">Informações de Registro Empresarial</h2>
+            </div>
+
+            <div class="data-grid">
+                <div class="data-card">
+                    <div class="data-card-title">Razão Social</div>
+                    <div class="data-card-value">Mundial Pedras LTDA</div>
+                </div>
+
+                <div class="data-card">
+                    <div class="data-card-title">Nome Fantasia</div>
+                    <div class="data-card-value">Telhas e Pedras Mundial</div>
+                </div>
+
+                <div class="data-card">
+                    <div class="data-card-title">CNPJ</div>
+                    <div class="data-card-value">01.316.105/0001-17</div>
+                </div>
+
+                <div class="data-card">
+                    <div class="data-card-title">Inscrição Estadual (SP)</div>
+                    <div class="data-card-value">310.227.809.117</div>
+                </div>
+
+                <div class="data-card">
+                    <div class="data-card-title">Situação Cadastral</div>
+                    <div class="data-card-value" style="color: #16a34a;">Ativa (desde 01/12/2001)</div>
+                </div>
+
+                <div class="data-card">
+                    <div class="data-card-title">Tipo de Estabelecimento</div>
+                    <div class="data-card-value">Matriz</div>
+                </div>
+
+                <div class="data-card">
+                    <div class="data-card-title">Natureza Jurídica</div>
+                    <div class="data-card-value">Sociedade Empresária Limitada</div>
+                </div>
+
+                <div class="data-card">
+                    <div class="data-card-title">Porte da Empresa</div>
+                    <div class="data-card-value">Empresa de Pequeno Porte</div>
+                </div>
+
+                <div class="data-card">
+                    <div class="data-card-title">Capital Social</div>
+                    <div class="data-card-value">R$ 100.000,00</div>
+                </div>
+
+                <div class="data-card">
+                    <div class="data-card-title">Opção pelo MEI</div>
+                    <div class="data-card-value">Não</div>
+                </div>
+
+                <div class="data-card">
+                    <div class="data-card-title">Opção pelo Simples Nacional</div>
+                    <div class="data-card-value">Não (Exclusão: 01/07/2007 - 31/12/2019)</div>
+                </div>
+
+                <div class="data-card">
+                    <div class="data-card-title">Tempo de Atividade</div>
+                    <div class="data-card-value">30 anos, 1 mês e 28 dias</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização e Contatos -->
+    <section id="localizacao" class="section services-bg">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Onde Estamos</span>
+                <h2 class="section-title">Contatos & Localização</h2>
+            </div>
+
+            <div class="location-grid">
+                <div class="contact-box">
+                    <h3 class="font-heading" style="font-size: 1.4rem; margin-bottom: 24px;">Canais de Atendimento</h3>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.85rem; color: var(--gray-600); display: block;">Telefone Principal</span>
+                            <a href="tel:1637225466" style="font-size: 1.2rem; font-weight: 700; color: var(--dark); text-decoration: none;">(16) 3722-5466</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span style="font-size: 0.85rem; color: var(--gray-600); display: block;">E-mail de Contato</span>
+                            <a href="mailto:gislene@pedrasmundial.com.br" style="font-size: 1.1rem; font-weight: 700; color: var(--primary); text-decoration: none;">gislene@pedrasmundial.com.br</a>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--gray-300);">
+                        <a href="https://pedrasmundial.com.br/" target="_blank" class="btn btn-external" style="width: 100%; justify-content: center;">
+                            <i class="fa-solid fa-external-link"></i> Visite pedrasmundial.com.br
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-box">
+                    <h3 class="font-heading" style="font-size: 1.4rem; margin-bottom: 24px;">Endereço de Correspondência</h3>
+                    <p style="margin-bottom: 16px; color: var(--gray-600);">Utilize o endereço abaixo para atendimento presencial, entregas e documentos fiscais:</p>
+
+                    <div style="background: white; padding: 20px; border-radius: 12px; border: 1px solid var(--gray-200); line-height: 1.8;">
+                        <strong style="color: var(--dark); font-size: 1.05rem;">Telhas e Pedras Mundial (Mundial Pedras LTDA)</strong><br>
+                        Avenida Paulo VI, 660<br>
+                        Jardim Alvorada<br>
+                        Franca - SP<br>
+                        <strong>CEP:</strong> 14403-138
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Mundial Pedras LTDA</h3>
+                    <p style="max-width: 400px; margin-bottom: 20px;">Soluções completas em telhas e pedras decorativas para construção civil com tradição, variedade e qualidade comprovada.</p>
+                    <p><strong>CNPJ:</strong> 01.316.105/0001-17</p>
+                </div>
+
+                <div>
+                    <h4 style="color: white; margin-bottom: 16px;">Navegação</h4>
+                    <ul class="footer-links">
+                        <li><a href="#servicos">Principais Serviços</a></li>
+                        <li><a href="#dados">Dados Cadastrais</a></li>
+                        <li><a href="#localizacao">Contatos & Endereço</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color: white; margin-bottom: 16px;">Link Oficial</h4>
+                    <p style="margin-bottom: 16px; font-size: 0.85rem;">Visite o site oficial da empresa:</p>
+                    <a href="https://pedrasmundial.com.br/" target="_blank" class="btn btn-external" style="padding: 10px 18px; font-size: 0.85rem;">
+                        Pedras Mundial <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mundial Pedras LTDA. Todos os direitos reservados.</p>
+                <p>Franca/SP - CEP: 14403-138</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
